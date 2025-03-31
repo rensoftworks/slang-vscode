@@ -3,19 +3,19 @@
 	"name": "Slang",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#keys"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.slang",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
 		"strings": {
 			"name": "string.quoted.double.slang",
 			"begin": "\"",
@@ -26,6 +26,31 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"constants":{
+			"patterns": [{
+				"name": "constant.numeric.slang",
+				"match": "-?\\d+(\\.?\\d+)?"
+			},
+			{
+				"name": "constant.language.slang",
+				"match": "[^\",\\s#\\\\\\n\\r=\\{\\}\\[\\]]+"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.number-sign.slang",
+				"match": "^#.*$"
+			}]
+		},
+		"keys": {
+			"patterns": [{
+				"match": "([^\",\\s#\\\\\\n\\r=\\{\\}\\[\\]]+|-?\\d+(\\.?\\d+)?|\\\"(\\\\\\\"|[^\\\"])*\\\")[,\\s]*(=)",
+				"captures": {
+					"1": { "name": "variable.other.slang" },
+					"4": { "name": "keyword.operator.slang" }
+				}
+			}]
 		}
 	},
 	"scopeName": "source.slang"
