@@ -1,0 +1,25 @@
+{
+  "name": "slang-vscode",
+  "displayName": "slang-vscode",
+  "description": "Language support for Slang, a minimalist configuration language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "slang",
+      "aliases": ["Slang", "slang"],
+      "extensions": [".slang"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "slang",
+      "scopeName": "source.slang",
+      "path": "./syntaxes/slang.tmLanguage.json"
+    }]
+  }
+}
