@@ -1,6 +1,6 @@
 {
   "name": "slang-vscode",
-  "displayName": "slang-vscode",
+  "displayName": "Slang for VSCode",
   "description": "Language support for Slang, a minimalist configuration language",
   "repository": "https://github.com/rensoftworks/slang-vscode",
   "version": "0.1.0",
