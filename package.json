@@ -3,7 +3,7 @@
   "displayName": "Slang for VSCode",
   "description": "Language support for Slang, a minimalist configuration language",
   "repository": "https://github.com/rensoftworks/slang-vscode",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.96.4"
   },

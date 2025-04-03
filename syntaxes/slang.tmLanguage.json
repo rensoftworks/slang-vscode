@@ -40,7 +40,7 @@
 		"comments": {
 			"patterns": [{
 				"name": "comment.line.number-sign.slang",
-				"match": "^#.*$"
+				"match": "#.*$"
 			}]
 		},
 		"keys": {
