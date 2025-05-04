@@ -3,6 +3,9 @@
 	"name": "Slang",
 	"patterns": [
 		{
+			"include": "#variables"
+		},
+		{
 			"include": "#keys"
 		},
 		{
@@ -50,6 +53,19 @@
 					"1": { "name": "variable.other.slang" },
 					"4": { "name": "keyword.operator.slang" }
 				}
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"match": "(@[^\",\\s#\\\\\\n\\r=\\{\\}\\[\\]]+|@-?\\d+(\\.?\\d+)?|@\\\"(\\\\\\\"|[^\\\"])*\\\")[,\\s]*(=)",
+				"captures": {
+					"1": { "name": "entity.name.type.slang" },
+					"4": { "name": "keyword.operator.slang" }
+				}
+			},
+			{
+				"name": "entity.name.type.slang",
+				"match": "@([^\",\\s#\\\\\\n\\r=\\{\\}\\[\\]]+|-?\\d+(\\.?\\d+)?|\\\"(\\\\\\\"|[^\\\"])*\\\")"
 			}]
 		}
 	},
